@@ -2,6 +2,9 @@
 
 A simple wrapper website to act as common entrypoint to self-hosted applications, with YAML-defined structure.
 
+
+![image](.doc/demo.png)
+
 # Usage
 
 In my setup, using docker helps me organize all my processes, so this app is docker-run. You can also serve it with you favourite http server.

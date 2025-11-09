@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Dashboard</title>
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/homepage.png">
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="sidebar" tabindex="0">
+      <div class="search-bar">
+        <input type="search" id="search" placeholder="Search apps..." oninput="updateSearchFilter()" />
+      </div>
+
+      <!-- populated from JS -->
+      <!-- <div class="group"> -->
+      <!--   <div class="group-content"> -->
+      <!--   </div> -->
+      <!-- </div> -->
+    </div>
+
+
+    <div class="content">
+      <!-- populated from JS -->
+      <!-- <iframe id="..."></iframe> -->
+      <!-- <iframe id="..."></iframe> -->
+      <!-- <iframe id="..."></iframe> -->
+    </div>
+</body>
+
+<template id="template-group">
+  <div class="group">
+    <div class="group-header" onclick="collapseGroupToggle(this)">
+      <span class="name">GroupName</span> 
+      <span class="toggle-arrow">▼</span>
+    </div>
+    <div class="group-content">
+      <!-- insert something here -->
+    </div>
+  </div>
+</template>
+
+<template id="template-service-litem">
+  <button onclick="displayServiceIframe">
+    <img src="" alt="KO">
+    <span>ServiceName</span>
+  </button>
+</template>
+
+</html>

@@ -1,0 +1,19 @@
+host-resolution:
+  - 10.144.*.*: 10.144.23.42     # vpn
+  - 192.168.*.*: 192.168.11.120  # lan
+
+services:
+  Media:
+    jellyfin:
+      - port: 8096
+      - icon: https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/jellyfin.png
+    
+    yams-docs:
+      - host: https://yams.media/
+      - icon: https://yams.media/pics/logo.webp 
+      
+  Infra:
+    portainer:
+      - port: 9000
+      - icon: https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/portainer.png
+      - newtab: true

@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  iframe-selector:
+    image: nginx:alpine
+    container_name: iframe-dashboard
+    ports:
+      - "8000:80"
+    volumes:
+      - ./src/main.js:/usr/share/nginx/html/main.js
+      - ./src/index.html:/usr/share/nginx/html/index.html
+      - ./src/styles.css:/usr/share/nginx/html/styles.css
+      - ./services.yaml:/usr/share/nginx/html/services.yaml
+
+    restart: unless-stopped

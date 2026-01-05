@@ -32,12 +32,22 @@ async function loadServices() {
         serviceList.forEach((entry) => Object.assign(svcObj, entry));
 
         let endpoint;
-        if (svcObj.host && !svcObj.port) {
+
+        // Valid URL is used as destination
+        if (
+          svcObj.host?.startsWith("http://") ||
+          svcObj.host?.startsWith("https://")
+        ) {
           endpoint = svcObj.host;
-        } else {
+        } // No host port or path? Use server's plus serviceName as path for reverse proxy/redir
+        else if (!svcObj.host && !svcObj.port && !svcObj.path) {
+          endpoint = `http://${serverAddress}/${serviceName}`;
+        } // Default case, use defaults if needed else adhere to input
+        else {
           const host = svcObj.host ?? serverAddress;
           const port = svcObj.port ? `:${svcObj.port}` : "";
-          endpoint = `http://${host}${port}`;
+          const path = svcObj.path ? `/${svcObj.path}` : "";
+          endpoint = `http://${host}${port}${path}`;
         }
 
         console.log(endpoint);

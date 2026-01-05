@@ -16,6 +16,9 @@ body {
     overflow-y: auto;
     padding: 0;
     outline: none;
+    
+    scrollbar-width: 4px;
+    scrollbar-color: #64748bcc transparent;
 }
 
 .sidebar:focus {
@@ -130,3 +133,5 @@ iframe.active {
       zoom: 0.8;
   }
 }
+
+

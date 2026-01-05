@@ -27,9 +27,10 @@ can call both the group and the app whatever you want.
 ```
 services:
   MyGroupAlias:
-    MyServiceAlias:
+    MyServiceAlias:       ## Iframe will point to server:8096/index.html
       - host: false       # No host means use the server's
       - port: 8096        # Port where service is hosted
+      - path: index.html  # Path pointing to service
       - newtab: false     # Preview in webpage, or force in new tab
       - icon: https://... # Link to icon
     

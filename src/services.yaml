@@ -1,0 +1,11 @@
+host-resolution:
+  - 192.168.*.*: 192.168.0.1 
+
+services:
+  Music:
+    musicbrainz:
+      - host: https://musicbrainz.org/
+      - icon: https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/musicbrainz.png
+    spotify:
+      - host: https://open.spotify.com/
+      - icon: https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/spotify.png
